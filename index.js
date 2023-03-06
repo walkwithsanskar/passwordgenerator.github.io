@@ -10,6 +10,7 @@ const symbolsCheck=document.querySelector("#symbols")
 const indicator = document.querySelector("[data-indicator]")
 const generateBtn=document.querySelector(".generateButton")
 const allCheckBox=document.querySelectorAll("input[type=checkbox]")
+const clearbtn=document.querySelector(".clear")
 const symbols="[$&+,:;=?@#|'<>.-^*()%!]";
 let password = '';
 let passwordLength=10;
@@ -199,4 +200,12 @@ generateBtn.addEventListener('click',()=>{
     passwordDisplay.value=password;
     // calculate strength
 
+})
+
+
+
+clearbtn.addEventListener('click',(e)=>{
+    password="";
+    console.log("cleared password");
+    passwordDisplay.value=password;
 })
